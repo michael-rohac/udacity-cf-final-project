@@ -1,0 +1,22 @@
+[
+  {
+    "ParameterKey": "EnvironmentName",
+    "ParameterValue": "UdacityIaCProject"
+  },
+  {
+    "ParameterKey": "WebServerPort",
+    "ParameterValue": "80"
+  },
+  {
+    "ParameterKey": "MinInstances",
+    "ParameterValue": "1"
+  },
+  {
+    "ParameterKey": "MaxInstances",
+    "ParameterValue": "4"
+  },
+  {
+    "ParameterKey": "JumpBoxKey",
+    "ParameterValue": "jump-box-key"
+  }
+]
