@@ -9,7 +9,7 @@
   },
   {
     "ParameterKey": "MinInstances",
-    "ParameterValue": "1"
+    "ParameterValue": "2"
   },
   {
     "ParameterKey": "MaxInstances",

@@ -25,7 +25,7 @@ Prerequisites:
 - You've updated `.awsenvrc` file accordingly - i.e. you've added right region, CLI profile etc.
 - You've selected some reasonable infrastructure stack name - in example below `fpinfra`
 - You've selected some reasonable server's stack name - in example below `fpservers`
-- OPTIONAL: You've created KMS key to access jump box for easier troubleshooting and have private key
+- You've created KMS key to access jump box for easier troubleshooting. Appropriate key name was set in server.json. 
 
 ```shell
 # 1. create infrastructure stack
@@ -71,4 +71,21 @@ In project were used 2 types of AMIs:
 
 For different AMIs there's different user. Amazon Linux AMI uses `ec2-user` while Ubuntu based AMI uses `ubuntu`, what must be
 reflected in given ssh/scp commands.
+
+
+# Results & Functional Test
+
+* [Diagram](./IaC_FinalProject_Diagram.jpeg)
+* Screenshots:
+  * [Created CF stacks](./scrshots/cf_stacks.png)
+  * [Auto scaling group detail](./scrshots/autoscaling_group_details.png)
+  * [Load Balancer detail with public URL](./scrshots/lb_detail_showing_url.png)
+  * [EC2 Instances after provisioning](./scrshots/ec2_instances.png)
+  * [Private EC2 instance detail](./scrshots/private_ec2_instance_detail.png) - to prove it has no public IP/DNS name
+
+Functional URLs via LoadBalancer:
+
+* [Apache2 default page](http://fpser-webap-1ra7lkvfpty6o-1925703401.us-east-1.elb.amazonaws.com)
+* [Health check created during provisioning](http://fpser-webap-1ra7lkvfpty6o-1925703401.us-east-1.elb.amazonaws.com/health.html)
+
 
